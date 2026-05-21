@@ -1,9 +1,26 @@
 # Show My FPS
 
-## Setup
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
 
-## License
+A simple and easy-to-use Minecraft mod for Fabric and Quilt (Quilt versions are currently in beta). The displays are designed to be extremely customizable from the onscreen position to the colors to the size to dynamically changing properties to keybinds to toggle features of the display. The mod is extremely lightweight with minimal FPS impact.
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+
+
+!\[Local Image](img/demoimg.png)
+
+
+
+### Note
+
+
+
+The mod is currently in alpha and everything including descriptions are to be changed.
+
+
+
+### License
+
+
+
+The mod is licensed under the MIT license. Feel free to use the mod in your modpacks and as templates for your mods.
+
