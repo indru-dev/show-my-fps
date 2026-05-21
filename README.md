@@ -6,7 +6,7 @@ A simple and easy-to-use Minecraft mod for Fabric and Quilt (Quilt versions are 
 
 
 
-!\[Local Image](img/demoimg.png)
+!\[File Not Detected 😞](https://cdn.modrinth.com/data/SIGwd6Px/images/f1384061fba019bf0e90da2e1680f441ef5e12d6.png)
 
 
 
