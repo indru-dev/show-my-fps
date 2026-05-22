@@ -6,12 +6,16 @@ import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.Minecraft;
 
 public class ShowMyFPSClient implements ClientModInitializer {
+	final Runtime runtime = Runtime.getRuntime();
+	private long memoryUpdate = 0;
+	private String cachedMemory = "";
+
 	@Override
 	public void onInitializeClient() {
-		Runtime runtime = Runtime.getRuntime();
 
 		HudRenderCallback.EVENT.register((drawContext, tickDelta) -> {
 			Minecraft client = Minecraft.getInstance();
+			long time = System.currentTimeMillis();
 
 			if(client.player == null) return;
 
@@ -19,18 +23,19 @@ public class ShowMyFPSClient implements ClientModInitializer {
 			int mspt = 0;
 			int ping = 0;
 
-			double smoothramperc = 0;
-			double smoothram = 0;
-			long usedram = (runtime.totalMemory() - runtime.freeMemory()) /1024 /1024;
-			long maxram = runtime.maxMemory() /1024 /1024;
-			double ramperc = (usedram / (double)maxram) * 100;
+			if(time - memoryUpdate >= 1000) {
+				long usedram = (runtime.totalMemory() - runtime.freeMemory()) /1024 /1024;
+				long maxram = runtime.maxMemory() /1024 /1024;
+				double ramperc = (usedram / (double)maxram) * 100;
 
-			if(smoothram == 0) {
-				smoothram = usedram;
-			} else {
-				smoothram = (usedram - smoothram) * 0.5;
+				cachedMemory = String.format(
+						"Memory: %d MB (%.1f%%)",
+						usedram,
+						ramperc
+				);
+
+				memoryUpdate = time;
 			}
-			smoothramperc = ((ramperc - smoothramperc)) * 0.5;
 
 			if(client.getSingleplayerServer() != null) {
 				mspt = (int)client.getSingleplayerServer().getAverageTickTimeNanos() / 1000000;
@@ -62,15 +67,9 @@ public class ShowMyFPSClient implements ClientModInitializer {
 					0x00FF00
 			);
 
-			String ram = String.format(
-					"Memory: %d MB (%.1f%%)",
-					(long)smoothram,
-					smoothramperc
-			);
-
 			drawContext.drawString(
 					client.font,
-					ram,
+					cachedMemory,
 					5,
 					25,
 					0x00FF00

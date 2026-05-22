@@ -8,10 +8,10 @@
 		"Me!"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/show-my-fps/",
+		"sources": "https://github.com/indru-dev/show-my-fps"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/showmyfps/icon.png",
 	"environment": "*",
 	"entrypoints": {
