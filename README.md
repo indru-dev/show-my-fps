@@ -1,26 +1,35 @@
-# Show My FPS
+## Show My FPS
+A simple and easy-to-use HUD overlay mod, guaranteed to have virtually no performance impact. The mod is built for fabric and quilt for the lack of FPS display mods. Our goal is to make sure the mod works with every version that Fabric/Quilt supports. (Quilt support is currently in beta.)
 
+- FPS
+- Memory Usage
+- MSPT
+- Ping
 
+All these features can be toggled on or off, positioned to your like, and you can choose your own color for each feature. (The customization config is W.I.P for now)
 
-A simple and easy-to-use Minecraft mod for Fabric and Quilt (Quilt versions are currently in beta). The displays are designed to be extremely customizable from the onscreen position to the colors to the size to dynamically changing properties to keybinds to toggle features of the display. The mod is extremely lightweight with minimal FPS impact.
+## Demo
+![*The Display*](https://cdn.modrinth.com/data/cached_images/f1384061fba019bf0e90da2e1680f441ef5e12d6.png)
 
+![*Zoomed in Display*](https://cdn.modrinth.com/data/cached_images/c6fe4e882835e16c8953e71c4284d741629b9a3e.png)
 
+## Config
+Every single property of the display can be changed manually through the config file for now. Cloth/YACL/Configured support coming soon.
 
-!\[File Not Detected 😞](https://cdn.modrinth.com/data/SIGwd6Px/images/f1384061fba019bf0e90da2e1680f441ef5e12d6.png)
+## Note
+**Requires **FABRIC API**. For Quilt versions, the Quilted Fabric API **(QFAPI)** and Quilt Standard Libraries **(QSL)** is required.**
 
+I plan to use the Modrinth page for complete releses or alphas. All RC / alpha candidates will be uploaded on [GitHub Releases](https://github.com/indru-dev/show-my-fps/releases)
 
+## Bugs and Problems
+If any bugs are found, or if the mod is found to conflict with other mods, you can report at the [GitHub Issue Tracker](https://github.com/indru-dev/show-my-fps/issues).
 
-### Note
+To all the devs, you can contribute to the mod by creating a [Pull Request](https://github.com/indru-dev/show-my-fps/pulls).
 
+### Will this mod be available for neoforge?
+I'm not planning moving to other modloaders since FML and Neoforged have FPS displays on by default. But we sure are planning to port the mod to **Babric** soon.
 
+### Yes,
+This mod is client side and every version above 1.0.0 is safe to use on servers.
 
-The mod is currently in alpha and everything including descriptions are to be changed.
-
-
-
-### License
-
-
-
-The mod is licensed under the MIT license. Feel free to use the mod in your modpacks and as templates for your mods.
 
