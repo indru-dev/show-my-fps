@@ -7,12 +7,13 @@ import net.minecraft.client.Minecraft;
 
 public class ShowMyFPSClient implements ClientModInitializer {
 	final Runtime runtime = Runtime.getRuntime();
-	private long memoryUpdate = 0;
-	private String cachedMemory = "";
 
 	@Override
 	public void onInitializeClient() {
 
+		//If you're reading this, this is a kinda deprecated method, by that I mean DEPRECATED deprecated.
+		//It's much better to use HudElementRegistry, but it doesn't work for me.
+		//And this is fine for this version anyway.
 		HudRenderCallback.EVENT.register((drawContext, tickDelta) -> {
 			Minecraft client = Minecraft.getInstance();
 			long time = System.currentTimeMillis();
@@ -22,6 +23,8 @@ public class ShowMyFPSClient implements ClientModInitializer {
 			int fps = client.getFps();
 			int mspt = 0;
 			int ping = 0;
+			long memoryUpdate = 0;
+			String cachedMemory = "";
 
 			if(time - memoryUpdate >= 1000) {
 				long usedram = (runtime.totalMemory() - runtime.freeMemory()) /1024 /1024;
