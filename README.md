@@ -1,35 +1,29 @@
 ## Show My FPS
-A simple and easy-to-use HUD overlay mod, guaranteed to have virtually no performance impact. The mod is built for fabric and quilt for the lack of FPS display mods. Our goal is to make sure the mod works with every version that Fabric supports.
 
-- FPS
-- Memory Usage
-- MSPT
-- Ping
+A simple, easy-to-use and extremely customizable HUD overlay mod, guaranteed to have virtually no performance impact. The mod targets at supporting Fabric and Quilt, WITHOUT causing compatibility issues with other mods.
 
-All these features can be toggled on or off, positioned to your like, and you can choose your own color for each feature. (The customization config is W.I.P for now)
+FPS, MSPT/Ping (Automatically Changes on requirement), Memory Usage \& Used%, and Coords **(W.I.P)** can be displayed. All these features can be customized, positioned and tweaked to your liking.
 
 ## Demo
-![*The Display*](https://cdn.modrinth.com/data/cached_images/f1384061fba019bf0e90da2e1680f441ef5e12d6.png)
 
-![*Zoomed in Display*](https://cdn.modrinth.com/data/cached_images/c6fe4e882835e16c8953e71c4284d741629b9a3e.png)
+![Demo](https://cdn.modrinth.com/data/SIGwd6Px/images/dacdf7fd92b7e0767f147dc33edb2e357e73fd10.png)
 
-## Config
-Every single property of the display can be changed manually through the config file for now. Cloth/YACL/Configured support coming soon.
+![Display](https://cdn.modrinth.com/data/SIGwd6Px/images/73afab78f874572bc7255c9dd1ead8080e3f5f77.png)
 
-## Note
-Requires **FABRIC API**.
 
-I plan to use the Modrinth page for complete releses or alphas. All RC / alpha candidates will be uploaded on [GitHub Releases](https://github.com/indru-dev/show-my-fps/releases)
+
+## Note:
+
+[![Fabric API Required.](https://cdn.modrinth.com/data/SIGwd6Px/images/92ca9b636c2453d6acbc41691109ad61f6e196dd.jpeg)](https://modrinth.com/mod/fabric-api)
+
+I plan to use the Modrinth page for complete releses or alphas. All RC / alpha candidates will be uploaded on [GitHub Releases](https://github.com/indru-dev/show-my-fps/releases). The mod also receives regular updates.
 
 ## Bugs and Problems
+
 If any bugs are found, or if the mod is found to conflict with other mods, you can report at the [GitHub Issue Tracker](https://github.com/indru-dev/show-my-fps/issues).
 
 To all the devs, you can contribute to the mod by creating a [Pull Request](https://github.com/indru-dev/show-my-fps/pulls).
 
-### Will this mod be available for neoforge?
-I'm not planning moving to other modloaders since FML and Neoforged have FPS displays on by default. But we sure are planning to port the mod to **Babric / Ornithe / Legacy Fabric** soon and maybe **Quilt**.
+### Future Notes
 
-### Yes,
-This mod is client side and every version above 1.0.0 is safe to use on servers.
-
-
+I'm planning to port the mod to **Quilt** and other versions soon.
