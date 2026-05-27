@@ -1,8 +1,14 @@
 ## Show My FPS
 
-A simple, easy-to-use and extremely customizable HUD overlay mod, guaranteed to have virtually no performance impact. The mod targets at supporting Fabric and Quilt, WITHOUT causing compatibility issues with other mods.
+A simple, easy-to-use and extremely customizable HUD overlay mod, guaranteed to have virtually no performance impact. Designed for the Fabric ModLoader (with Quilt support planned), focusing at broad compatibility with other mods.
 
-FPS, MSPT/Ping (Automatically Changes on requirement), Memory Usage \& Used%, and Coords **(W.I.P)** can be displayed. All these features can be customized, positioned and tweaked to your liking.
+Displays:
+- FPS
+- MSPT/Ping (Switches automatically)
+- Memory Usage & Utilised%
+- Coordinates **(W.I.P)**
+
+All these features can be customized, positioned and tweaked to your liking.
 
 ## Demo
 
@@ -16,7 +22,9 @@ FPS, MSPT/Ping (Automatically Changes on requirement), Memory Usage \& Used%, an
 
 [![Fabric API Required.](https://cdn.modrinth.com/data/SIGwd6Px/images/92ca9b636c2453d6acbc41691109ad61f6e196dd.jpeg)](https://modrinth.com/mod/fabric-api)
 
-I plan to use the Modrinth page for complete releses or alphas. All RC / alpha candidates will be uploaded on [GitHub Releases](https://github.com/indru-dev/show-my-fps/releases). The mod also receives regular updates.
+The mod is completely **Client-Side**. Safe to use on servers.
+
+I plan to use the Modrinth page for complete releases or alphas. All RC / alpha candidates will be uploaded on [GitHub Releases](https://github.com/indru-dev/show-my-fps/releases). The mod also receives regular updates.
 
 ## Bugs and Problems
 
@@ -24,6 +32,3 @@ If any bugs are found, or if the mod is found to conflict with other mods, you c
 
 To all the devs, you can contribute to the mod by creating a [Pull Request](https://github.com/indru-dev/show-my-fps/pulls).
 
-### Future Notes
-
-I'm planning to port the mod to **Quilt** and other versions soon.
