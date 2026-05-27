@@ -32,3 +32,6 @@ If any bugs are found, or if the mod is found to conflict with other mods, you c
 
 To all the devs, you can contribute to the mod by creating a [Pull Request](https://github.com/indru-dev/show-my-fps/pulls).
 
+## Licensing
+
+The mod is licensed under MIT. You may use it in your Modrinth and CurseForge modpacks.
