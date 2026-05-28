@@ -17,6 +17,11 @@ repositories {
 		name 'Xander Maven'
 		url 'https://maven.isxander.dev/releases'
 	}
+
+	maven {
+		name 'Terraformers'
+		url 'https://maven.terraformersmc.com/'
+	}
 }
 
 loom {
@@ -40,8 +45,9 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-	// YACL impl
+	// Mod impl
 	modImplementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
+	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 	
 }
 

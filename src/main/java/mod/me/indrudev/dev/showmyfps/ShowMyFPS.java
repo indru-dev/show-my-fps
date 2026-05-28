@@ -19,6 +19,9 @@ public class ShowMyFPS implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
+
+
 		LOGGER.info("Hi Im IndruDev, if you are reading this in a crash log, it is probably bcuz of me.");
+		LOGGER.info("I'm just kina a dumb coder");
 	}
 }
