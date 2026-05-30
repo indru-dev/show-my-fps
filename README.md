@@ -34,4 +34,4 @@ To all the devs, you can contribute to the mod by creating a [Pull Request](http
 
 ## Licensing
 
-The mod is licensed under MIT. You may use it in your Modrinth and CurseForge modpacks.
+The mod is licensed under [MIT](https://github.com/indru-dev/show-my-fps/blob/main/LICENSE). You may use it in your Modrinth and CurseForge modpacks.

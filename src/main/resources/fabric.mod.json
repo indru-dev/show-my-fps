@@ -3,9 +3,9 @@
 	"id": "showmyfps",
 	"version": "${version}",
 	"name": "Show My FPS",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A Simple Yet Extremely Customizable FPS Display Mod That Has Minimal Performance Impact and Is Designed to Be Easy to Use.",
 	"authors": [
-		"Me!"
+		"Indru Dev"
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/show-my-fps/",
@@ -16,10 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"mod.me.indrudev.dev.showmyfps.ShowMyFPS"
+			"mod.me.indrudev.dev.showmyfps.ignoreSMF"
 		],
 		"client": [
-			"mod.me.indrudev.dev.showmyfps.client.ShowMyFPSClient"
+			"mod.me.indrudev.dev.showmyfps.client.SMF"
+		],
+		"modmenu": [
+			"mod.me.indrudev.dev.showmyfps.client.ModMenuImpl"
 		]
 	},
 	"mixins": [
@@ -29,12 +32,21 @@
 			"environment": "client"
 		}
 	],
+	"custom": {
+		"modmenu": {
+			"badges": ["utility"],
+			"update_checker": true
+		}
+	},
+	"suggests": {
+		"modmenu": "11.0.4"
+	},
 	"depends": {
 		"fabricloader": ">=0.19.2",
 		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*",
 		"yet_another_config_lib_v3": ">=3.6.1+1.21-fabric",
-		"modmenu": ">=11.0.3"
+		"modmenu": ">=11.0.2"
 	}
 }

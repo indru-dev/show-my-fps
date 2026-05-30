@@ -5,7 +5,8 @@ import net.minecraft.client.Minecraft;
 
 public class SMFDisplay {
     private static final Runtime runtime = Runtime.getRuntime();
-    public static void display() {
+
+    public static void render() {
 
         HudRenderCallback.EVENT.register((drawContext, tickDelta) -> {
             Minecraft client = Minecraft.getInstance();
