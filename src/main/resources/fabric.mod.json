@@ -8,12 +8,13 @@
 		"Indru Dev"
 	],
 	"contact": {
-		"homepage": "https://modrinth.com/mod/show-my-fps/",
+		"curseforge": "https://www.curseforge.com/minecraft/mc-mods/show-my-fps",
+		"modrinth": "https://modrinth.com/mod/show-my-fps/",
 		"sources": "https://github.com/indru-dev/show-my-fps"
 	},
 	"license": "MIT",
 	"icon": "assets/showmyfps/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
 		"main": [
 			"mod.me.indrudev.dev.showmyfps.ignoreSMF"
@@ -22,7 +23,7 @@
 			"mod.me.indrudev.dev.showmyfps.client.SMF"
 		],
 		"modmenu": [
-			"mod.me.indrudev.dev.showmyfps.client.ModMenuImpl"
+			"mod.me.indrudev.dev.showmyfps.client.impl.modmenu"
 		]
 	},
 	"mixins": [
@@ -39,7 +40,8 @@
 		}
 	},
 	"suggests": {
-		"modmenu": "11.0.4"
+		"modmenu": "11.0.4",
+		"yet_another_config_lib_v3": "3.8.2+1.21-fabric"
 	},
 	"depends": {
 		"fabricloader": ">=0.19.2",
