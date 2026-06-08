@@ -4,10 +4,13 @@ import dev.isxander.yacl3.api.ConfigCategory;
 import dev.isxander.yacl3.api.Option;
 import dev.isxander.yacl3.api.OptionDescription;
 import dev.isxander.yacl3.api.YetAnotherConfigLib;
+import dev.isxander.yacl3.api.controller.ColorControllerBuilder;
 import dev.isxander.yacl3.api.controller.TickBoxControllerBuilder;
 import mod.me.indrudev.dev.showmyfps.client.data.data;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+
+import java.awt.*;
 
 public class config {
 
@@ -16,8 +19,8 @@ public class config {
         return YetAnotherConfigLib.createBuilder()
                 .title(Component.literal("SMF Config"))
                 .category(ConfigCategory.createBuilder()
-                        .name(Component.literal("SMF Settings"))
-                        .tooltip(Component.literal("Settings for the SMF FPS Monitor."))
+                        .name(Component.literal("Basic Settings"))
+                        .tooltip(Component.literal("Settings for basic things about the SMF Monitor."))
 
                         .option(Option.<Boolean>createBuilder()
                                 .name(Component.literal("Enable FPS Monitor"))
@@ -61,6 +64,42 @@ public class config {
                                         perc -> data.get().perc = perc
                                 )
                                 .controller(TickBoxControllerBuilder::create)
+                                .build())
+
+                        .build())
+
+                .category(ConfigCategory.createBuilder()
+                        .name(Component.literal("Advanced Settings"))
+                        .tooltip(Component.literal("Advanced Options like Components (W.I.P) and Colors"))
+
+                        .option(Option.<Color>createBuilder()
+                                .name(Component.literal("Color for FPS Monitor"))
+                                .description(OptionDescription.of(Component.literal("Color for the FPS Monitor.")))
+                                .binding(
+                                        Color.WHITE,
+                                        () -> data.get().colfps,
+                                        col -> data.get().colfps = col
+                                ).controller(ColorControllerBuilder::create)
+                                .build())
+
+                        .option(Option.<Color>createBuilder()
+                                .name(Component.literal("Color for MSPT Monitor"))
+                                .description(OptionDescription.of(Component.literal("Color for the MSPT Monitor.")))
+                                .binding(
+                                        Color.WHITE,
+                                        () -> data.get().colmspt,
+                                        col -> data.get().colmspt = col
+                                ).controller(ColorControllerBuilder::create)
+                                .build())
+
+                        .option(Option.<Color>createBuilder()
+                                .name(Component.literal("Color for Memory Monitor"))
+                                .description(OptionDescription.of(Component.literal("Color for the Memory Monitor.")))
+                                .binding(
+                                        Color.WHITE,
+                                        () -> data.get().colmem,
+                                        col -> data.get().colmem = col
+                                ).controller(ColorControllerBuilder::create)
                                 .build())
 
                         .build())

@@ -8,6 +8,8 @@ import mod.me.indrudev.dev.showmyfps.client.data.data;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 
+import java.awt.*;
+
 public class HUD {
     private static String cached = "";
     private static long lastUpdate = 0;
@@ -45,13 +47,18 @@ public class HUD {
             max = runtime.totalMemory() /1024 /1024;
             perc = (used / (double)max) * 100;
 
+            //Colors
+            int colfps = data.get().colfps.getRGB();
+            int colmspt = data.get().colmspt.getRGB();
+            int colmem = data.get().colmem.getRGB();
+
             //Display
             if(data.get().fps) {
                 gui.drawString(
                         font,
                         "FPS: " + fps,
                         5, 5,
-                        0xFFFFFF
+                        colfps
                 );
             }
             if(client.getSingleplayerServer() != null) {
@@ -60,14 +67,14 @@ public class HUD {
                             font,
                             "@ " + mspt + " ms",
                             5, 15,
-                            0xFFFFFF
+                            colmspt
                     );
                 } else if(data.get().mspt) {
                     gui.drawString(
                             font,
                             "@ " + mspt + " ms",
                             5, 5,
-                            0xFFFFFF
+                            colmspt
                     );
                 } else {
                     if (data.get().mspt && data.get().fps) {
@@ -75,14 +82,14 @@ public class HUD {
                                 font,
                                 "@ " + ping + " ms",
                                 5, 15,
-                                0xFFFFFF
+                                colmspt
                         );
                     } else if (data.get().mspt) {
                         gui.drawString(
                                 font,
                                 "@ " + ping + " ms",
                                 5, 5,
-                                0xFFFFFF
+                                colmspt
                         );
                     }
                 }
@@ -112,7 +119,7 @@ public class HUD {
                         font,
                         cached,
                         5, memloc,
-                        0xFFFFFF
+                        colmem
                 );
             } else if(data.get().mem) {
                 cached = String.format(
@@ -123,7 +130,7 @@ public class HUD {
                         font,
                         cached,
                         5, memloc,
-                        0xFFFFFF
+                        colmem
                 );
             } else if(data.get().perc) {
                 cached = String.format(
@@ -134,7 +141,7 @@ public class HUD {
                         font,
                         cached,
                         5, memloc,
-                        0xFFFFFF
+                        colmem
                 );
             }
 

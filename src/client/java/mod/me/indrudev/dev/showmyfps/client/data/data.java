@@ -24,11 +24,21 @@ public class data {
         return HANDLER.instance();
     }
 
-    //Config Entries
+    //Entries<FPS>
     @SerialEntry public Boolean fps = true;
+    @SerialEntry public String strfps = "FPS: ";
+    @SerialEntry public Color colfps = Color.WHITE;
+
+    //Entries<MSPT>
     @SerialEntry public Boolean mspt = true;
+    @SerialEntry public String strmspt = "@ ";
+    @SerialEntry public Color colmspt = Color.WHITE;
+
+    //Entries<MEM>
     @SerialEntry public Boolean mem = false;
     @SerialEntry public Boolean perc = true;
+    @SerialEntry public String strmem = "Memory: ";
+    @SerialEntry public Color colmem = Color.WHITE;
 
 
 }
