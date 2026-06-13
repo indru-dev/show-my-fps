@@ -15,7 +15,7 @@ public class data {
     public static final ConfigClassHandler<data> HANDLER = ConfigClassHandler.<data>createBuilder(data.class)
             .id(ID)
             .serializer(config -> GsonConfigSerializerBuilder.create(config)
-                    .setPath(FabricLoader.getInstance().getConfigDir().resolve("SMF-config.json"))
+                    .setPath(FabricLoader.getInstance().getConfigDir().resolve("showmyfps-conf.json"))
                     .build()
             )
             .build();
@@ -26,18 +26,15 @@ public class data {
 
     //Entries<FPS>
     @SerialEntry public Boolean fps = true;
-    @SerialEntry public String strfps = "FPS: ";
     @SerialEntry public Color colfps = Color.WHITE;
 
     //Entries<MSPT>
     @SerialEntry public Boolean mspt = true;
-    @SerialEntry public String strmspt = "@ ";
     @SerialEntry public Color colmspt = Color.WHITE;
 
     //Entries<MEM>
     @SerialEntry public Boolean mem = false;
     @SerialEntry public Boolean perc = true;
-    @SerialEntry public String strmem = "Memory: ";
     @SerialEntry public Color colmem = Color.WHITE;
 
 
