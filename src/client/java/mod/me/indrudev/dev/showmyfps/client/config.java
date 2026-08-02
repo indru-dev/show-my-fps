@@ -5,6 +5,7 @@ import dev.isxander.yacl3.api.Option;
 import dev.isxander.yacl3.api.OptionDescription;
 import dev.isxander.yacl3.api.YetAnotherConfigLib;
 import dev.isxander.yacl3.api.controller.ColorControllerBuilder;
+import dev.isxander.yacl3.api.controller.StringControllerBuilder;
 import dev.isxander.yacl3.api.controller.TickBoxControllerBuilder;
 import mod.me.indrudev.dev.showmyfps.client.data.data;
 import net.minecraft.client.gui.screens.Screen;
@@ -18,63 +19,24 @@ public class config {
 
         return YetAnotherConfigLib.createBuilder()
                 .title(Component.literal("SMF Config"))
+
                 .category(ConfigCategory.createBuilder()
-                        .name(Component.literal("Basic Settings"))
-                        .tooltip(Component.literal("Settings for basic things about the SMF Monitor."))
+                        .name(Component.literal("FPS Monitor"))
+                        .tooltip(Component.literal("Settings for FPS Monitor"))
 
                         .option(Option.<Boolean>createBuilder()
-                                .name(Component.literal("Enable FPS Monitor"))
-                                .description(OptionDescription.of(Component.literal("Enables/Disables the FPS Monitor.")))
+                                .name(Component.literal("Enable"))
+                                .description(OptionDescription.of(Component.literal("Enable FPS Monitor?")))
                                 .binding(
                                         true,
                                         () -> data.get().fps,
-                                        fps -> data.get().fps = fps
-                                )
-                                .controller(TickBoxControllerBuilder::create)
+                                        en -> data.get().fps = en
+                                ).controller(TickBoxControllerBuilder::create)
                                 .build())
-
-                        .option(Option.<Boolean>createBuilder()
-                                .name(Component.literal("Enable MSPT/Ping Monitor"))
-                                .description(OptionDescription.of(Component.literal("Enables/Disables the MSPT Monitor in Singleplayer and Ping Monitor in Multiplayer.")))
-                                .binding(
-                                        true,
-                                        () -> data.get().mspt,
-                                        mspt -> data.get().mspt = mspt
-                                )
-                                .controller(TickBoxControllerBuilder::create)
-                                .build())
-
-                        .option(Option.<Boolean>createBuilder()
-                                .name(Component.literal("Enable Memory Usage Monitor"))
-                                .description(OptionDescription.of(Component.literal("Enables/Disables the Memory Usage Monitor, the part which displays the Memory Usage in Megabytes.")))
-                                .binding(
-                                        false,
-                                        () -> data.get().mem,
-                                        mem -> data.get().mem = mem
-                                )
-                                .controller(TickBoxControllerBuilder::create)
-                                .build())
-
-                        .option(Option.<Boolean>createBuilder()
-                                .name(Component.literal("Enable Memory Utility Monitor"))
-                                .description(OptionDescription.of(Component.literal("Enables/Disables the Memory Usage Monitor, the part which displays the Memory Usage in Percentage.")))
-                                .binding(
-                                        true,
-                                        () -> data.get().perc,
-                                        perc -> data.get().perc = perc
-                                )
-                                .controller(TickBoxControllerBuilder::create)
-                                .build())
-
-                        .build())
-
-                .category(ConfigCategory.createBuilder()
-                        .name(Component.literal("Advanced Settings"))
-                        .tooltip(Component.literal("Advanced Options like Components (W.I.P) and Colors"))
 
                         .option(Option.<Color>createBuilder()
-                                .name(Component.literal("Color for FPS Monitor"))
-                                .description(OptionDescription.of(Component.literal("Color for the FPS Monitor.")))
+                                .name(Component.literal("Color"))
+                                .description(OptionDescription.of(Component.literal("Color of FPS Monitor")))
                                 .binding(
                                         Color.WHITE,
                                         () -> data.get().colfps,
@@ -82,9 +44,35 @@ public class config {
                                 ).controller(ColorControllerBuilder::create)
                                 .build())
 
+                        .option(Option.<String>createBuilder()
+                                .name(Component.literal("Component"))
+                                .description(OptionDescription.of(Component.literal("Text showed on the FPS Monitor. Default is 'FPS:''")))
+                                .binding(
+                                        "FPS: ",
+                                        () -> data.get().strfps,
+                                        str -> data.get().strfps = str
+                                ).controller(StringControllerBuilder::create)
+                                .build())
+
+                        .build())
+
+                .category(ConfigCategory.createBuilder()
+                        .name(Component.literal("MSPT/Ping Monitor"))
+                        .tooltip(Component.literal("Settings for MSPT/Ping Monitor"))
+
+                        .option(Option.<Boolean>createBuilder()
+                                .name(Component.literal("Enable"))
+                                .description(OptionDescription.of(Component.literal("Enable MSPT/Ping Monitor?")))
+                                .binding(
+                                        true,
+                                        () -> data.get().mspt,
+                                        en -> data.get().mspt = en
+                                ).controller(TickBoxControllerBuilder::create)
+                                .build())
+
                         .option(Option.<Color>createBuilder()
-                                .name(Component.literal("Color for MSPT Monitor"))
-                                .description(OptionDescription.of(Component.literal("Color for the MSPT Monitor.")))
+                                .name(Component.literal("Color"))
+                                .description(OptionDescription.of(Component.literal("Color of MSPT/String Monitor")))
                                 .binding(
                                         Color.WHITE,
                                         () -> data.get().colmspt,
@@ -92,14 +80,60 @@ public class config {
                                 ).controller(ColorControllerBuilder::create)
                                 .build())
 
+                        .option(Option.<String>createBuilder()
+                                .name(Component.literal("Component"))
+                                .description(OptionDescription.of(Component.literal("Text showed on the MSPT/String Monitor.")))
+                                .binding(
+                                        "@ ",
+                                        () -> data.get().strmspt,
+                                        str -> data.get().strmspt = str
+                                ).controller(StringControllerBuilder::create)
+                                .build())
+
+                        .build())
+
+                .category(ConfigCategory.createBuilder()
+                        .name(Component.literal("Memory Monitor"))
+                        .tooltip(Component.literal("Settings for Memory Monitor"))
+
+                        .option(Option.<Boolean>createBuilder()
+                                .name(Component.literal("Enable Numeric"))
+                                .description(OptionDescription.of(Component.literal("Enable Memory Monitor With Megabytes?")))
+                                .binding(
+                                        false,
+                                        () -> data.get().mem,
+                                        en -> data.get().mem = en
+                                ).controller(TickBoxControllerBuilder::create)
+                                .build())
+
+                        .option(Option.<Boolean>createBuilder()
+                                .name(Component.literal("Enable Percentile"))
+                                .description(OptionDescription.of(Component.literal("Enable Memory Monitor with Percentile?")))
+                                .binding(
+                                        true,
+                                        () -> data.get().perc,
+                                        enperc -> data.get().perc = enperc
+                                ).controller(TickBoxControllerBuilder::create)
+                                .build())
+
                         .option(Option.<Color>createBuilder()
-                                .name(Component.literal("Color for Memory Monitor"))
-                                .description(OptionDescription.of(Component.literal("Color for the Memory Monitor.")))
+                                .name(Component.literal("Color"))
+                                .description(OptionDescription.of(Component.literal("Color of Memory Monitor")))
                                 .binding(
                                         Color.WHITE,
                                         () -> data.get().colmem,
                                         col -> data.get().colmem = col
                                 ).controller(ColorControllerBuilder::create)
+                                .build())
+
+                        .option(Option.<String>createBuilder()
+                                .name(Component.literal("Component"))
+                                .description(OptionDescription.of(Component.literal("Text showed on the Memory Monitor.")))
+                                .binding(
+                                        "Memory: ",
+                                        () -> data.get().strmem,
+                                        str -> data.get().strmem = str
+                                ).controller(StringControllerBuilder::create)
                                 .build())
 
                         .build())

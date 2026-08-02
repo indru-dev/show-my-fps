@@ -56,7 +56,7 @@ public class HUD {
             if(data.get().fps) {
                 gui.drawString(
                         font,
-                        "FPS: " + fps,
+                        data.get().strfps + fps,
                         5, 5,
                         colfps
                 );
@@ -65,14 +65,14 @@ public class HUD {
                 if(data.get().mspt && data.get().fps) {
                     gui.drawString(
                             font,
-                            "@ " + mspt + " ms",
+                            data.get().strmspt + mspt + " ms",
                             5, 15,
                             colmspt
                     );
                 } else if(data.get().mspt) {
                     gui.drawString(
                             font,
-                            "@ " + mspt + " ms",
+                            data.get().strmspt + mspt + " ms",
                             5, 5,
                             colmspt
                     );
@@ -80,14 +80,14 @@ public class HUD {
                     if (data.get().mspt && data.get().fps) {
                         gui.drawString(
                                 font,
-                                "@ " + ping + " ms",
+                                data.get().strmspt + ping + " ms",
                                 5, 15,
                                 colmspt
                         );
                     } else if (data.get().mspt) {
                         gui.drawString(
                                 font,
-                                "@ " + ping + " ms",
+                                data.get().strmspt + ping + " ms",
                                 5, 5,
                                 colmspt
                         );
@@ -111,35 +111,35 @@ public class HUD {
 
             if(data.get().mem && data.get().perc) {
                 cached = String.format(
-                        "Memory: %d (%.1f%%)",
+                        "%d (%.1f%%)",
                         used, perc
                 );
 
                 gui.drawString(
                         font,
-                        cached,
+                        data.get().strmem + cached,
                         5, memloc,
                         colmem
                 );
             } else if(data.get().mem) {
                 cached = String.format(
-                        "Memory: %d", used
+                        "%d", used
                 );
 
                 gui.drawString(
                         font,
-                        cached,
+                        data.get().strmem + cached,
                         5, memloc,
                         colmem
                 );
             } else if(data.get().perc) {
                 cached = String.format(
-                        "Memory: %.1f%%", perc
+                        "%.1f%%", perc
                 );
 
                 gui.drawString(
                         font,
-                        cached,
+                        data.get().strmem + cached,
                         5, memloc,
                         colmem
                 );

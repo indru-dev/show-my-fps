@@ -27,15 +27,18 @@ public class data {
     //Entries<FPS>
     @SerialEntry public Boolean fps = true;
     @SerialEntry public Color colfps = Color.WHITE;
+    @SerialEntry public String strfps = "FPS: ";
 
     //Entries<MSPT>
     @SerialEntry public Boolean mspt = true;
     @SerialEntry public Color colmspt = Color.WHITE;
+    @SerialEntry public String strmspt = "@ ";
 
     //Entries<MEM>
     @SerialEntry public Boolean mem = false;
     @SerialEntry public Boolean perc = true;
     @SerialEntry public Color colmem = Color.WHITE;
+    @SerialEntry public String strmem = "Memory: ";
 
 
 }

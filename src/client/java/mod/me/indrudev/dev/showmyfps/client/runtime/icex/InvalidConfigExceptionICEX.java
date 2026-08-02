@@ -7,6 +7,6 @@ public class InvalidConfigExceptionICEX extends RuntimeException {
     }
 
     public InvalidConfigExceptionICEX(String msg) {
-        super("ICEX: eRROR: " + msg);
+        super("ICEX: ERROR: " + msg);
     }
 }
