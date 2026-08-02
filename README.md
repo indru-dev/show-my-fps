@@ -17,35 +17,37 @@
   <img src="https://img.shields.io/github/issues/indru-dev/show-my-fps?style=for-the-badge">
 </a>
 </center>
+<br>
+
 
 
 ### Show My FPS
-is a simple and **EXTREMELY** customizable Mod for monitoring Player Stats such as FPS, MSPT, etc. Hence making it a **CLIENT SIDE MOD**. Safe to use on servers.
 
-Displays:
-- FPS
-- MSPT/Ping (Switches automatically)
-- Memory Usage & Utilised%
-- Coordinates **(W.I.P)**
+Lightweight, customizable HUD mod to keep track of the most necessary necessities, that can all be configured, positioned, colored, edited and tweaked to your liking. Yes, **your** liking. 🫵
 
-All these features can be customized, positioned and tweaked to your liking. Yes, all of it, to **your** liking.
+See the **⚙️ Config Tutorial Dropdown ⚙️** below to configure the mod, and have a good day, _folks!_
+
+| _"How shouldst thou behold thy frames per second, wer't not for this enchanted craft?"_ |
+|--|
 
 ## Demo 📷
 
-![Demo](https://cdn.modrinth.com/data/cached_images/c1818bc98d492ec5f1944105d658c29d97012dbb.jpeg)
+![Demo](https://cdn.modrinth.com/data/cached_images/a9d5fb4a060849f4a819d64f8aa7392e2aca96ed.jpeg)
 
-![Config Screen](https://cdn.modrinth.com/data/cached_images/8987ef395831d96528394f31a19ddbd46dbb52d2.png)
-The above config screen be opened through Mod Menu.
-<details>
-<summary>How to Configure The Mod</summary>
-
-Firstly, open your Mod Menu. The mod is made to integrate into the [Mod Menu API](https://modrinth.com/mod/modmenu). 
+![Config Screen](https://cdn.modrinth.com/data/cached_images/7a43be4aea91a1deaee0d22351a0079d63758676.jpeg)
 &nbsp;
-![Accessing YACL Screen](https://cdn.modrinth.com/data/cached_images/fcb7c19effd707c84b888f0eeebe715efd4b12a7.jpeg)
+The above config screen can be opened through Mod Menu.
+
+<details>
+<summary>⚙️ Config Tutorial</summary>
+
+- Firstly, open your Mod Menu. The mod is made to integrate into the [Mod Menu API](https://modrinth.com/mod/modmenu). 
+&nbsp;
+![Accessing YACL Screen](https://cdn.modrinth.com/data/cached_images/b705a84c5cffe1b28e3067c284f9d19ea4acaee1.jpeg)
 <br>
-Now you should see a screen like below. From here, you can enable and disable all the features you need. Colors and Components are **W.I.P**.
-![Config Screen](https://cdn.modrinth.com/data/cached_images/8987ef395831d96528394f31a19ddbd46dbb52d2.png)
-![After being configured](https://cdn.modrinth.com/data/cached_images/fa2b62c70b76f86b658b28e9d75d8e065f4ab872.jpeg)
+- Now you should see a screen like below. From here, you can enable and disable all the features you need, from colors to positions and components (planned).
+![advanced config](https://cdn.modrinth.com/data/cached_images/e1c46f9c544fa440f068a1ce51e6bc50821e6e55.jpeg)
+![final setup](https://cdn.modrinth.com/data/cached_images/ab2822e5ee6309a1a332c4cc2e2cd0f8f94215b4.jpeg)
 
 </details>
 
@@ -56,24 +58,8 @@ Now you should see a screen like below. From here, you can enable and disable al
 
 If any bugs are found, or if the mod is found to conflict with other mods, you can report at the [GitHub Issue Tracker](https://github.com/indru-dev/show-my-fps/issues).
 
-<details>
-<summary>For The Developers 😁</summary>
-  Hi fellow developer!!! 👋
-  <br>
-  <br>
-  This mod is probably no use to you in the developer world, and its no code that you should learn from either. 
-  <br>
-  <br>
-  Now I am decent dev, but this mod is just a little HUD experiment that I decided to make <b>POLISHED</b>.
-  <br>
-  <br>
-  Now if you really want to learn, you can view the source at [GitHub](https://github.com/indru-dev/show-my-fps/tree/main) and maybe do a [Pull Request](https://github.com/indru-dev/show-my-fps/pulls).
-<br>
-  <br>
-But yeah, I'm not uploading any Dev or Javadoc JARs or using proper formatting.
-  
-</details>
+Also, pull requests are always accepted! Just ``fork`` the repo, add some changes, and create a [Pull Request](https://github.com/indru-dev/show-my-fps/pulls)! I aim to respond to pull requests under 12 - 24 hours.
 
 ## 📃 Modpack Support? (Basically Licensing)
 
-The mod is licensed under [MIT](https://github.com/indru-dev/show-my-fps/blob/main/LICENSE). You may use it in your Modrinth and CurseForge modpacks for **free** (with credit)!
+The mod is licensed under [MIT](https://github.com/indru-dev/show-my-fps/blob/main/LICENSE). You may use it in your Modrinth and CurseForge modpacks for **free** (with or without credit)!
